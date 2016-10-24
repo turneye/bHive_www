@@ -1,0 +1,109 @@
+﻿body {
+  background-color: #ededed;
+}
+.topOffset {
+  margin-top: 70px;
+}
+.topbanner {
+  height: 100vh;
+  width: 100%;
+  background: #df325a;
+  /*background: -moz-radial-gradient(center, ellipse cover, #df325a 0%, #df325a 40%, #161616 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #df325a 0%,#df325a 40%,#161616 100%);
+    background: radial-gradient(ellipse at center, #df325a 0%,#df325a 40%,#161616 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#df325a', endColorstr='#161616',GradientType=1 );*/
+  text-align: center;
+  background-image: url(../../Images/wardrobe.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.navbar-brand img {
+  height: 40px;
+  top: -10px;
+  position: relative;
+}
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.section .heading {
+  background-color: #fff;
+  padding: 15px 0 5px;
+  line-height: 36px;
+  font-size: 36px;
+  color: #161616;
+}
+.section .heading .headingtext {
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #dededb;
+  width: 50%;
+  margin: auto;
+}
+.section .content {
+  background-color: #fdfdfd;
+  padding: 25px 10% 40px;
+  margin-bottom: 50px;
+}
+.section .content .text {
+  font-size: 15px;
+  line-height: 30px;
+  text-align: justify;
+}
+.subtitle {
+  color: #b9174f;
+  font-size: 16px;
+}
+.reading-link {
+  width: 100%;
+}
+.reading-link p {
+  float: left;
+  margin-right: 20px;
+  min-width: 200px;
+}
+.overview {
+  background-image: url(../../Images/honeycomb_overview.png);
+  background-repeat: no-repeat;
+  background-position-y: -100px;
+  margin-top: -100px;
+  padding-top: 100px;
+  height: 750px;
+  vertical-align: top;
+}
+.hexagon-1 {
+  position: relative;
+  display: inline-block;
+  width: 360px;
+  left: 230px;
+  top: 70px;
+  color: white;
+}
+.hexagon-2 {
+  position: relative;
+  display: inline-block;
+  width: 360px;
+  left: 290px;
+  top: 50px;
+  color: white;
+}
+.hexagon-2 p {
+  line-height: 24px;
+}
+.container-fluid.thecoop {
+  background-color: #d91b5c;
+  height: 300px;
+}
+.section.thecoop {
+  position: relative;
+  top: -130px;
+}
+.section.thecoop .heading {
+  border-bottom: 0;
+}
+.section.thecoop .heading .span {
+  width: 50%;
+  margin: auto;
+  border-bottom: 2px solid #dededb;
+}
