@@ -13,6 +13,11 @@ body {
 .topOffset {
     margin-top: 70px;
 }
+@media only screen and (max-device-width : 480px) {
+        .text-left-xs {
+        text-align: left;
+    }
+}
 
 .topbanner {
     height: 100vh;
@@ -33,6 +38,13 @@ body {
     height: 40px;
     top: -10px;
     position: relative;
+}
+.navbar-default .navbar-nav>.active>a {
+    color: white;
+}
+
+hr.lighter {
+  border-top: 1px solid #bdb9ba;
 }
 
 .section {
@@ -67,10 +79,18 @@ body {
     }
 }
 
+.m-t-lg {
+    margin-top: 30px;
+}
+
 .subtitle {
     color: darken(@bannerBack, 7%);
     font-size: 16px;
 }
+h3.subtitle {
+    font-size: 22px;
+}
+
 
 .reading-link {
     width: 100%;
@@ -92,6 +112,8 @@ body {
     height: 650px;
     vertical-align: top;
 }
+
+
 
 .hexagon-1 {
     position: relative;
@@ -116,6 +138,20 @@ body {
     }
 }
 
+@media only screen and (max-device-width : 1024px) {
+    .overview {
+        background-image: url(../../Images/honeycomb_overview_small.png);
+        height: 750px;
+    }
+    .hexagon-2 {
+        position: relative;
+        display: inline-block;
+        width: 360px;
+        left: 20px;
+        top: 210px;
+        color: white;
+    }
+}
 
 .container-fluid.thecoop {
     background-color: @bannerBack;
@@ -188,19 +224,38 @@ body {
 }
 
 
-
+.learnContainer{
+    background-image: url("../Images/bluecomb.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    min-height: 92vh;
+}
+.eoicontainer {
+    background-image: url("../Images/wardrobe_bw.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
 .container-fluid {
     img.backimg {
         position: absolute;
         left: 0;
         top: 0;
+        opacity: 0.3;
         width: 100%;
-        height: auto;
-        opacity: 0.2;
+        height: 100%;
         z-index: -999;
+    }
+    img.greyscale {
+        -webkit-filter: grayscale(100%);
+	    filter: grayscale(100%);
+	    filter: gray;
     }
 }
 
 .panel-body {
-    background-color: #f8f8f8;
+    background-color: rgba(248, 248, 248, 0.85);
 }
+
+

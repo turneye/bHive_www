@@ -4,6 +4,11 @@
 .topOffset {
   margin-top: 70px;
 }
+@media only screen and (max-device-width: 480px) {
+  .text-left-xs {
+    text-align: left;
+  }
+}
 .topbanner {
   height: 100vh;
   width: 100%;
@@ -22,6 +27,12 @@
   height: 40px;
   top: -10px;
   position: relative;
+}
+.navbar-default .navbar-nav > .active > a {
+  color: white;
+}
+hr.lighter {
+  border-top: 1px solid #bdb9ba;
 }
 .section {
   padding-bottom: 50px;
@@ -50,9 +61,15 @@
   line-height: 30px;
   text-align: justify;
 }
+.m-t-lg {
+  margin-top: 30px;
+}
 .subtitle {
   color: #b9174f;
   font-size: 16px;
+}
+h3.subtitle {
+  font-size: 22px;
 }
 .reading-link {
   width: 100%;
@@ -89,6 +106,20 @@
 }
 .hexagon-2 p {
   line-height: 24px;
+}
+@media only screen and (max-device-width: 1024px) {
+  .overview {
+    background-image: url(../../Images/honeycomb_overview_small.png);
+    height: 750px;
+  }
+  .hexagon-2 {
+    position: relative;
+    display: inline-block;
+    width: 360px;
+    left: 20px;
+    top: 210px;
+    color: white;
+  }
 }
 .container-fluid.thecoop {
   background-color: #d91b5c;
@@ -147,15 +178,33 @@ a.register-button,
 a.register-button:hover {
   text-decoration: none;
 }
+.learnContainer {
+  background-image: url("../Images/bluecomb.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  min-height: 92vh;
+}
+.eoicontainer {
+  background-image: url("../Images/wardrobe_bw.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
 .container-fluid img.backimg {
   position: absolute;
   left: 0;
   top: 0;
+  opacity: 0.3;
   width: 100%;
-  height: auto;
-  opacity: 0.2;
+  height: 100%;
   z-index: -999;
 }
+.container-fluid img.greyscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+}
 .panel-body {
-  background-color: #f8f8f8;
+  background-color: rgba(248, 248, 248, 0.85);
 }

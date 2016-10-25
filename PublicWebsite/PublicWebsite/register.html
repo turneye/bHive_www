@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Site Properties -->
+    <title>Welcome to the bHive</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Proza+Libre|Slabo+27px" rel="stylesheet">
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/custom.min.css" rel="stylesheet" />
+</head>
+<body ng-app="app">
+    <!-- Following Menu -->
+    <nav class="navbar navbar-default navbar-fixed-top learntopcolor">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="Images/logo2.png" alt="bHive" /></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="learn.html">Learn More</a></li>
+                    <li class="active"><a href="#">EOI</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="topOffset"></div>
+    <!-- Page Contents -->
+    <div class="container-fluid eoicontainer" ng-controller="RegisterController as ctrlReg">
+
+        <!--<img src="Images/wardrobe.png" class="backimg greyscale img-responsive" style="overflow: hidden;" />-->
+        <!--<a class="btn btn-success" ng-click="ctrlReg.success = !ctrlReg.success">Test</a>
+        <a class="btn btn-danger" ng-click="ctrlReg.error = !ctrlReg.error">Test</a>-->
+        <br />
+        <br />
+        <div class="section">
+            <div class="container">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        Expression of interest
+                    </div>
+                    <div class="panel-body semi-transparent">
+                        <form class="form-horizontal" ng-hide="ctrlReg.success">
+                            <h4>Please complete the below form to register your expression of interest in bHive.</h4><br />
+                            <fieldset>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="name">Name</label>
+                                    <div class="col-md-4">
+                                        <input id="name" name="name" type="text" placeholder="" class="form-control input-md" required="" ng-model="ctrlReg.formData.name">
+                                        <span class="text-danger" ng-hide="ctrlReg.formData.name">Please enter your name</span>
+                                    </div>
+                                    
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="email">Email Address</label>
+                                    <div class="col-md-4">
+                                        <input id="email" name="email" type="email" placeholder="" class="form-control input-md" required="" ng-model="ctrlReg.formData.email">
+                                        <span class="text-danger" ng-hide="ctrlReg.formData.email">Please enter your email address</span>
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="phone">Phone / Mobile</label>
+                                    <div class="col-md-3">
+                                        <input id="phone" name="phone" type="text" placeholder="" class="form-control input-md" ng-model="ctrlReg.formData.phone">
+
+                                    </div>
+                                </div>
+
+                                <!-- Textarea -->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="otherinfo">Additional Info / Questions</label>
+                                    <div class="col-md-4">
+                                        <textarea class="form-control" id="otherinfo" name="otherinfo" ng-model="ctrlReg.formData.otherinfo"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group text-center">
+                                    <hr />
+                                    <h3 class="subtitle m-t-lg">I would like to support bHive Cooperative </h3>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-8 col-md-offset-2 text-center subtitle">
+                                        Share Skills
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        bHive will need a broad range of skills including legal, accounting, grant writing and lots more.<br />
+                                        Let us know what you can offer, and we will try to match you up with some tasks.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="phone">Skills / expertise I can offer</label>
+                                    <div class="col-md-6">
+                                        <input id="skills" name="skills" type="text" placeholder="" class="form-control" ng-model="ctrlReg.formData.skills">
+                                    </div>
+                                </div>
+
+                                <!-- FOUNDING PATRON -->
+                                <div class="form-group">
+                                    <div class="col-md-10 col-md-offset-1 text-center subtitle">
+                                        <hr class="lighter"/>
+                                        Become a founding patron 
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        bHive will need money to fund the development of the platform cooperative up to launch.<br />
+                                        Let us know what you would like to pledge and we will get in touch.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-10 col-md-offset-1">
+                                            <div class="col-md-1 col-sm-2 text-right text-left-xs">I pledge</div>
+                                            <div class="col-md-2 col-sm-2 col-xs-offset-2 col-sm-offset-0">
+                                                <label for="fivehungy">
+                                                    <input type="radio" name="pledge" id="fivehungy" ng-click="ctrlReg.clearpledge(500)" value="500" ng-model="ctrlReg.formData.pledgeAmount">
+                                                    $500
+                                                </label>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-offset-2 col-sm-offset-0">
+                                                <label for="grand">
+                                                    <input type="radio" name="pledge" id="grand" ng-click="ctrlReg.clearpledge(1000)" value="1000" ng-model="ctrlReg.formData.pledgeAmount">
+                                                    $1000
+                                                </label>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-offset-2 col-sm-offset-0">
+                                                <label for="coupla">
+                                                    <input type="radio" name="pledge" id="coupla" ng-click="ctrlReg.clearpledge(2000)" value="2000" ng-model="ctrlReg.formData.pledgeAmount">
+                                                    $2000
+                                                </label>
+                                            </div>
+                                            <div class="col-md-5 col-sm-4">
+                                                to get bHive ready for launch.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-10 col-md-offset-1">
+                                            <div class="visible-xs">&nbsp;</div>
+                                            <div class="col-md-1 col-sm-2 text-right text-left-xs">or</div>
+                                            <div class="col-md-5 col-sm-7 col-xs-offset-2 col-sm-offset-0">
+                                                <label for="notsure">
+                                                    <input type="radio" name="pledge" ng-click="ctrlReg.clearpledge(0)" id="notsure" value="0" ng-model="ctrlReg.formData.pledgeAmount">
+                                                    I'm not sure what I'd like to pledge yet.
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- AMBASSADORS -->
+                                <div class="form-group">
+                                    <div class="col-md-10 col-md-offset-1 text-center subtitle">
+                                        <hr class="lighter" />
+                                        Become a bHive Ambasador
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        bHive needs people to advocate for this exciting initiative, let us know if you would like to talk about ideas. Alternatively, get out and talk it up.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-8 col-md-offset-4">
+                                        <div class="checkbox">
+                                            <label for="checkAmbassador1">
+                                                <input type="checkbox" name="ambassador" id="checkAmbassador1" value="1" ng-model="ctrlReg.formData.ambassador1">
+                                                I would like to talk to you about some ideas
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label for="checkAmbassador2">
+                                                <input type="checkbox" name="ambassador" id="checkAmbassador2" value="2" ng-model="ctrlReg.formData.ambassador2">
+                                                I know someone who would be really interested in this
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Multiple Checkboxes -->
+
+                                <div class="form-group text-center">
+                                    <hr />
+                                    <h3 class="subtitle m-t-lg">I would like to use the bHive Cooperative Platform</h3>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">
+                                    </label>
+                                    <div class="col-md-8">
+                                        Please select the areas which excite you most about the bHive Platform Cooperative...
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <div class="col-md-4 col-sm-6" ng-repeat="item in ctrlReg.modules">
+                                            <label class="checkbox-inline" ng-click="ctrlReg.toggleSelected(item)">
+                                                <input type="checkbox" name="uses" ng-model="item.selected">
+                                                {{item.name}}
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group text-center">
+                                    <hr />
+                                    <a class="btn btn-primary" ng-click="ctrlReg.sendEmail();">Submit Form</a>
+                                    <p ng-show="ctrlReg.error" class="text-danger">Sorry, we were unable to process your request at this time</p>
+                                </div>
+                            </fieldset>
+                        </form>
+                        <div ng-show="ctrlReg.success" class="text-center">
+                            <h2 class="text-success">Thank you for your interest in bHive</h2>
+                            <p>Your message has been sent and someone from bHive Cooperative will be in touch with you soon.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-animate.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="App/app.js"></script>
+
+</body>
+</html>

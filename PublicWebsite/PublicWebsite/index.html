@@ -1,6 +1,8 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Site Properties -->
     <title>Welcome to the bHive</title>
 
@@ -29,7 +31,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="learn.html">Learn More</a></li>
+                    <li><a href="register.html">EOI</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -40,13 +43,11 @@
         <div class="row">
             <div class="topbanner">
             </div>
-            
-
         </div>
     </div>
 
     <div class="spacer">
-        <a class="register-button"   id="about">Register Your Interest</a>
+        <a class="register-button" href="register.html" id="about">Expression of interest</a>
     </div>
     <div class="container-fluid">
         <div class="container">
@@ -63,7 +64,51 @@
         </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid visible-xs">
+        <div class="container section" style="margin-top: -50px;">
+                <div class="col-xs-12 text-center">
+                    <h1>bHive objectives</h1>
+                    <div class="text-justify">
+                        <p>Provide the technology that allows Bendigo to run peer to peer sharing enterprises</p>
+                        <p>Stimulate local spending, investment, work, entrepreneurship and connections</p>
+                        <p>Reinvest locally to build an economy based on shared health, wellbeing and prosperity</p>
+                    </div>
+                </div>
+            <div class="col-xs-12">
+                <hr />
+            </div>
+                <div class="col-xs-12 text-center">
+                    <div class="contents">
+                        <h1>Why “bHive”?</h1>
+                        <div class="text-justify">
+                            <p>The Beehive Building on Pall Mall housed Bendigo’s Mining Exchange, purpose built to service Bendigo’s new gold rush economy. This bHive is being designed to service the next economic boom for Bendigo: our sharing economy.</p>
+                        </div>
+                    </div>
+                </div>
+            <!--<div class="row">
+                <div class="col-md-5 col-md-offset-1">
+                    <div class="hexagon">
+                        <div class="contents">
+                            <h1>bHive objectives</h1>
+                            <p>Provide the technology that allows Bendigo to run peer to peer sharing enterprises</p>
+                            <p>Stimulate local spending, investment, work, entrepreneurship and connections</p>
+                            <p>Reinvest locally to build an economy based on shared health, wellbeing and prosperity</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="hexagon color-2">
+                        <div class="contents">
+                            <h1>Why “bHive”?</h1>
+                            <p>The Beehive Building on Pall Mall housed Bendigo’s Mining Exchange, purpose built to service Bendigo’s new gold rush economy. This bHive is being designed to service the next economic boom for Bendigo: our sharing economy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+
+    <div class="container-fluid hidden-xs">
         <div class="container">
             <div class="overview">
                 <div class="hexagon-1">
@@ -156,5 +201,10 @@
         <script src="Scripts/angular-route.js"></script>
         <script src="App/app.js"></script>
 
+    <script>
+        $('.navbar-collapse a').click(function () {
+            $(".navbar-collapse").collapse('hide');
+        });
+    </script>
 </body>
 </html>
