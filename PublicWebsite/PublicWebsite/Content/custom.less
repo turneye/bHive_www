@@ -195,33 +195,55 @@ h3.subtitle {
 @reg-righbot: #333 solid 2px;
 @reg-lefttop: #777 solid 1px;*/
 
+.ourbutton {
+    display: block;
+    width: 250px;
+    padding: 15px 20px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.ourbutton:hover, a.ourbutton, a.ourbutton:hover {
+    text-decoration: none;
+}
+
+@media only screen and (max-device-width : 480px) {
+    .ourbutton {
+        font-size: 14px;
+        width: 150px;
+    }
+}
 
 @reg-bg: #ffd200;
 @reg-righbot: darken(@reg-bg, 20%) solid 2px;
 @reg-lefttop: darken(@reg-bg, 20%) solid 1px;
 .register-button {
-    display: block;
-    width: 250px;
-    padding: 15px 20px;
-    margin: 0 auto;
     background-color: @reg-bg;
     border-left: @reg-lefttop;
     border-top: @reg-lefttop;
     border-right: @reg-righbot;
     border-bottom: @reg-righbot;
-    font-size: 18px;
-    line-height: 20px;
-    /*position: relative;
-    top: 95vh;*/
-    cursor: pointer;
-    /*-moz-box-shadow: @drop-shadow;
-    -webkit-box-shadow: @drop-shadow;
-    box-shadow: @drop-shadow;*/
+}
+.register-button:hover {
+    background-color: darken(@reg-bg, 6%);
 }
 
-.register-button:hover, a.register-button, a.register-button:hover {
-    text-decoration: none;
+@pro-bg: #f6f6f6;
+@pro-righbot: darken(@pro-bg, 20%) solid 2px;
+@pro-lefttop: darken(@pro-bg, 20%) solid 1px;
+.prospectus-button {
+    background-color: @pro-bg;
+    border-left: @pro-lefttop;
+    border-top: @pro-lefttop;
+    border-right: @pro-righbot;
+    border-bottom: @pro-righbot;
 }
+.prospectus-button:hover {
+    background-color: darken(@pro-bg, 6%);
+}
+
+
 
 
 .learnContainer{
@@ -259,3 +281,11 @@ h3.subtitle {
 }
 
 
+.moveindicator {
+    position: absolute;
+    margin: 0 auto;
+    bottom: 20px;
+    z-index: 9999;
+    width: 100%;
+    color: darken(@bannerBack, 6%);
+}

@@ -203,6 +203,7 @@
     <Content Include="Content\bootstrap\breadcrumbs.less" />
     <Content Include="Content\bootstrap\badges.less" />
     <Content Include="Content\bootstrap\alerts.less" />
+    <Content Include="Content\bHiveProspectus.pdf" />
     <None Include="Properties\PublishProfiles\bHivePublic - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />

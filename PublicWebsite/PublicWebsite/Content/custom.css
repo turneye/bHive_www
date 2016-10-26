@@ -154,29 +154,45 @@ h3.subtitle {
 /*@button-shadow: rgba(244, 233, 43, 0.62) 2px 2px 10px;
 @reg-righbot: #333 solid 2px;
 @reg-lefttop: #777 solid 1px;*/
-.register-button {
+.ourbutton {
   display: block;
   width: 250px;
   padding: 15px 20px;
   margin: 0 auto;
+  font-size: 18px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.ourbutton:hover,
+a.ourbutton,
+a.ourbutton:hover {
+  text-decoration: none;
+}
+@media only screen and (max-device-width: 480px) {
+  .ourbutton {
+    font-size: 14px;
+    width: 150px;
+  }
+}
+.register-button {
   background-color: #ffd200;
   border-left: #997e00 solid 1px;
   border-top: #997e00 solid 1px;
   border-right: #997e00 solid 2px;
   border-bottom: #997e00 solid 2px;
-  font-size: 18px;
-  line-height: 20px;
-  /*position: relative;
-    top: 95vh;*/
-  cursor: pointer;
-  /*-moz-box-shadow: @drop-shadow;
-    -webkit-box-shadow: @drop-shadow;
-    box-shadow: @drop-shadow;*/
 }
-.register-button:hover,
-a.register-button,
-a.register-button:hover {
-  text-decoration: none;
+.register-button:hover {
+  background-color: #e0b900;
+}
+.prospectus-button {
+  background-color: #f6f6f6;
+  border-left: #c3c3c3 solid 1px;
+  border-top: #c3c3c3 solid 1px;
+  border-right: #c3c3c3 solid 2px;
+  border-bottom: #c3c3c3 solid 2px;
+}
+.prospectus-button:hover {
+  background-color: #e7e7e7;
 }
 .learnContainer {
   background-image: url("../Images/bluecomb.jpg");
@@ -207,4 +223,12 @@ a.register-button:hover {
 }
 .panel-body {
   background-color: rgba(248, 248, 248, 0.85);
+}
+.moveindicator {
+  position: absolute;
+  margin: 0 auto;
+  bottom: 20px;
+  z-index: 9999;
+  width: 100%;
+  color: #be1850;
 }
