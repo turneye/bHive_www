@@ -21,7 +21,77 @@
   background-image: url(../../Images/wardrobe.png);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
+}
+.topbanner .container {
+  height: 100%;
+}
+.topbanner .buttons {
+  position: relative;
+  margin: auto;
+  margin-right: 0;
+  height: 100%;
+  vertical-align: middle;
+}
+.topbanner .buttons a {
+  margin: auto;
+  margin-right: 10px;
+}
+.topbanner .buttons a:first-child {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: -80px;
+}
+.topbanner .buttons a:last-child {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 120px;
+}
+@media only screen and (max-device-width: 768px) {
+  .topbanner {
+    background-position-y: 100px;
+  }
+  .topbanner .buttons a {
+    margin-right: auto;
+  }
+  .topbanner .buttons a:first-child {
+    top: 75%;
+    margin-top: 0;
+    left: -25%;
+  }
+  .topbanner .buttons a:last-child {
+    margin-top: -52px;
+    top: 75%;
+    left: 25%;
+  }
+}
+@media only screen and (max-device-width: 480px) {
+  .topbanner .buttons a:last-child {
+    margin-top: -42px;
+  }
+}
+.ourbutton {
+  display: block;
+  width: 250px;
+  padding: 15px 20px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.ourbutton:hover,
+a.ourbutton,
+a.ourbutton:hover {
+  text-decoration: none;
+}
+@media only screen and (max-device-width: 480px) {
+  .ourbutton {
+    font-size: 12px;
+    width: 150px;
+    padding: 10px 5px;
+  }
 }
 .navbar-brand img {
   height: 40px;
@@ -123,7 +193,7 @@ h3.subtitle {
 }
 .container-fluid.thecoop {
   background-color: #d91b5c;
-  height: 300px;
+  height: 250px;
 }
 .section.thecoop {
   position: relative;
@@ -136,6 +206,43 @@ h3.subtitle {
   width: 50%;
   margin: auto;
   border-bottom: 2px solid #dededb;
+}
+.container-fluid.video1 {
+  background-color: #111;
+  padding: 90px 0 45px;
+  text-align: center;
+}
+.container-fluid.video1 h2 {
+  color: #dededb;
+  margin-top: -25px;
+}
+@media only screen and (max-device-width: 769px) {
+  .container-fluid.video1 h2 {
+    font-size: 14px;
+  }
+}
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin-bottom: 50px;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (min-device-width: 769px) {
+  .embed-container {
+    max-width: 80%;
+    margin: 0 auto 50px auto;
+  }
 }
 .spacer {
   width: 100%;
@@ -154,32 +261,12 @@ h3.subtitle {
 /*@button-shadow: rgba(244, 233, 43, 0.62) 2px 2px 10px;
 @reg-righbot: #333 solid 2px;
 @reg-lefttop: #777 solid 1px;*/
-.ourbutton {
-  display: block;
-  width: 250px;
-  padding: 15px 20px;
-  margin: 0 auto;
-  font-size: 18px;
-  line-height: 20px;
-  cursor: pointer;
-}
-.ourbutton:hover,
-a.ourbutton,
-a.ourbutton:hover {
-  text-decoration: none;
-}
-@media only screen and (max-device-width: 480px) {
-  .ourbutton {
-    font-size: 14px;
-    width: 150px;
-  }
-}
 .register-button {
   background-color: #ffd200;
   border-left: #997e00 solid 1px;
   border-top: #997e00 solid 1px;
-  border-right: #997e00 solid 2px;
-  border-bottom: #997e00 solid 2px;
+  border-right: #997e00 solid 1px;
+  border-bottom: #997e00 solid 1px;
 }
 .register-button:hover {
   background-color: #e0b900;
@@ -188,8 +275,8 @@ a.ourbutton:hover {
   background-color: #f6f6f6;
   border-left: #c3c3c3 solid 1px;
   border-top: #c3c3c3 solid 1px;
-  border-right: #c3c3c3 solid 2px;
-  border-bottom: #c3c3c3 solid 2px;
+  border-right: #c3c3c3 solid 1px;
+  border-bottom: #c3c3c3 solid 1px;
 }
 .prospectus-button:hover {
   background-color: #e7e7e7;

@@ -10,6 +10,24 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/custom.min.css" rel="stylesheet" />
+
+    <!--
+    To collect end-user usage analytics about your application,
+    insert the following script into each page you want to track.
+    Place this code immediately before the closing </head> tag,
+    and before any other scripts. Your first data will appear
+    automatically in just a few seconds.
+    -->
+    <script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+    function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+    }({
+        instrumentationKey:"6aa861c3-0197-4015-865f-3b7de0e27116"
+    });
+
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+    </script>
 </head>
 <body ng-app="app">
     <!-- Following Menu -->
@@ -42,6 +60,12 @@
     <div class="container-fluid">
         <div class="row">
             <div class="topbanner">
+                <div class="container">
+                    <div class="buttons">
+                        <a class="ourbutton prospectus-button" href="Content/bHiveProspectus.pdf" target="_blank" id="about">View the prospectus</a>
+                        <a class="ourbutton register-button" href="register.html" id="about">Expression of interest</a>
+                    </div>
+                </div>
                 <div class="moveindicator">
                     <i class="fa fa-chevron-down fa-2x"></i>
                 </div>
@@ -49,7 +73,7 @@
         </div>
     </div>
 
-    <div class="spacer">
+    <!--<div class="spacer">
         <div class="container">
             <div class="row">
                 <div class="col-xs-6 col-md-4 col-md-offset-2">
@@ -60,8 +84,8 @@
                 </div>
             </div>
         </div>
-        
-    </div>
+    </div>-->
+
     <div class="container-fluid">
         <div class="container">
             <div class="section">
@@ -160,7 +184,14 @@
         </div>
     </div>
 
-
+    <div class="container-fluid video1">
+        <div class="container text-center">
+            <h2>bHive Pitch Night - Handle Bar - 25.11.2016</h2><br/>
+            <div class='embed-container'><iframe src='http://player.vimeo.com/video/189748914' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+            <div class='embed-container'><iframe src='http://player.vimeo.com/video/189683822' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+            <div class='embed-container'><iframe src='http://player.vimeo.com/video/189738526' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+        </div>
+    </div>
 
     <div class="container-fluid thecoop">
         &nbsp;
@@ -206,6 +237,8 @@
             </div>
         </div>
     </div>
+
+
 
         <script src="Scripts/jquery-1.9.1.min.js"></script>
         <script src="Scripts/bootstrap.min.js"></script>
