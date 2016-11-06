@@ -29,7 +29,7 @@
     appInsights.trackPageView();
     </script>
 </head>
-<body ng-app="app">
+<body ng-app="app" id="home">
     <!-- Following Menu -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -47,8 +47,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#pitchNight">Pitch Night</a></li>
                     <li><a href="learn.html">Learn More</a></li>
                     <li><a href="register.html">EOI</a></li>
                 </ul>
@@ -62,8 +62,8 @@
             <div class="topbanner">
                 <div class="container">
                     <div class="buttons">
-                        <a class="ourbutton prospectus-button" href="Content/bHiveProspectus.pdf" target="_blank" id="about">View the prospectus</a>
-                        <a class="ourbutton register-button" href="register.html" id="about">Expression of interest</a>
+                        <a class="ourbutton prospectus-button" href="Content/bHiveProspectus.pdf" target="_blank">View the prospectus</a>
+                        <a class="ourbutton register-button" href="register.html">Expression of interest</a>
                     </div>
                 </div>
                 <div class="moveindicator">
@@ -183,8 +183,7 @@
             </div>-->
         </div>
     </div>
-
-    <div class="container-fluid video1">
+    <div class="container-fluid video1" id="pitchNight">
         <div class="container text-center">
             <h2>bHive Pitch Night - Handle Bar - 25.11.2016</h2><br/>
             <div class='embed-container'><iframe src='http://player.vimeo.com/video/189748914' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
@@ -260,6 +259,16 @@
                 $('.moveindicator').fadeIn(500);
             }
 
+        });
+
+        $(document).on('click', 'a', function (event) {
+            if ($.attr(this, 'href').indexOf('#') >= 0) {
+                event.preventDefault();
+
+                $('html, body').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top - 50
+                }, 500);
+            }
         });
     </script>
 </body>
