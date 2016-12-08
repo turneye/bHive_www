@@ -23,6 +23,7 @@ namespace AngularJSWebApiEmpty.Controllers
             public bool ambassador2 { get; set; }
             public List<string> interests { get; set; }
             public int? pledgeAmount { get; set; }
+            public bool showSupport { get; set; }
         }
 
         //private SmtpClient GetSmtpClient()
@@ -61,35 +62,39 @@ namespace AngularJSWebApiEmpty.Controllers
             body += "Name : " + form.name + "<br/>";
             body += "Email : " + form.email + "<br/>";
             body += "Phone : " + form.phone + "<br/>";
-            body += "Other Info : " + form.otherinfo + "<br/>";
+            body += "Comments / Other Info : " + form.otherinfo + "<br/>";
             body += "<br/>";
-            if (form.skills != null) body += "Skills : " + form.skills + "<br/><br/>";
-
-            if (form.pledgeAmount != null)
+            if(form.showSupport)
             {
-                if(form.pledgeAmount == 0)
+                if (form.skills != null) body += "Skills : " + form.skills + "<br/><br/>";
+
+                if (form.pledgeAmount != null && form.pledgeAmount != 0)
                 {
-                    body += "Hmmmm, I'm sure what I'd like to pledge yet.<br/><br/>";
+                    if (form.pledgeAmount == -1)
+                    {
+                        body += "Hmmmm, I'm sure what I'd like to pledge yet.<br/><br/>";
+                    }
+                    else
+                    {
+                        body += "Pledged Amount : $" + form.pledgeAmount + (form.pledgeAmount == 2000 ? " (WOOHOO!)" : "") + "<br/><br/>";
+                    }
                 }
-                else
+
+
+                if (form.ambassador1 || form.ambassador2) body += "As an ambassador :";
+                if (form.ambassador1) body += "<br/><b>I would like to talk to you about some ideas</b><br/>";
+                if (form.ambassador2) body += "<br/><b>I know someone who would be really interested in this</b><br/>";
+
+                if (form.interests != null && form.interests.Count > 0)
                 {
-                    body += "Pledged Amount : $" + form.pledgeAmount + (form.pledgeAmount == 2000 ? " (WOOHOO!)" : "") + "<br/><br/>";
+                    body += "<br/>I am interested in using bHive for : ";
+                    form.interests.ForEach(o =>
+                    {
+                        body += o + "  |  ";
+                    });
                 }
             }
 
-
-            if (form.ambassador1 || form.ambassador2) body += "As an ambassador :";
-            if (form.ambassador1) body += "<br/><b>I would like to talk to you about some ideas</b><br/>";
-            if (form.ambassador2) body += "<br/><b>I know someone who would be really interested in this</b><br/>";
-
-            if (form.interests != null && form.interests.Count > 0)
-            {
-                body += "<br/>I am interested in using bHive for : ";
-                form.interests.ForEach(o =>
-                {
-                    body += o + "  |  ";
-                });
-            }
             body += "</body>";
 
             Email from = new Email("info@bhive.coop");

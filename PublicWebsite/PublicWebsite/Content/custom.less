@@ -6,6 +6,8 @@
 
 @headingColor: #161616;
 
+@topbannerBack: #df325a;
+
 body {
     background-color: #ededed;
 }
@@ -13,8 +15,9 @@ body {
 .topOffset {
     margin-top: 70px;
 }
+
 @media only screen and (max-device-width : 480px) {
-        .text-left-xs {
+    .text-left-xs {
         text-align: left;
     }
 }
@@ -37,6 +40,7 @@ body {
 .topbanner .container {
     height: 100%;
 }
+
 .topbanner .buttons {
     position: relative;
     margin: auto;
@@ -56,6 +60,7 @@ body {
     transform: translateY(-50%);
     margin-top: -80px;
 }
+
 .topbanner .buttons a:last-child {
     position: relative;
     top: 50%;
@@ -68,6 +73,7 @@ body {
     .topbanner {
         background-position-y: 100px;
     }
+
     .topbanner .buttons a {
         margin-right: auto;
     }
@@ -77,13 +83,14 @@ body {
         margin-top: 0;
         left: -25%;
     }
+
     .topbanner .buttons a:last-child {
         margin-top: -52px;
         top: 75%;
         left: 25%;
     }
-
 }
+
 @media only screen and (max-device-width : 480px) {
     .topbanner .buttons a:last-child {
         margin-top: -42px;
@@ -100,6 +107,7 @@ body {
     line-height: 20px;
     cursor: pointer;
 }
+
 .ourbutton:hover, a.ourbutton, a.ourbutton:hover {
     text-decoration: none;
 }
@@ -119,12 +127,13 @@ body {
     top: -10px;
     position: relative;
 }
-.navbar-default .navbar-nav>.active>a {
+
+.navbar-default .navbar-nav > .active > a {
     color: white;
 }
 
 hr.lighter {
-  border-top: 1px solid #bdb9ba;
+    border-top: 1px solid #bdb9ba;
 }
 
 .section {
@@ -167,6 +176,7 @@ hr.lighter {
     color: darken(@bannerBack, 7%);
     font-size: 16px;
 }
+
 h3.subtitle {
     font-size: 22px;
 }
@@ -223,6 +233,7 @@ h3.subtitle {
         background-image: url(../../Images/honeycomb_overview_small.png);
         height: 750px;
     }
+
     .hexagon-2 {
         position: relative;
         display: inline-block;
@@ -241,6 +252,7 @@ h3.subtitle {
 .section.thecoop {
     position: relative;
     top: -130px;
+    margin-bottom: -130px;
 
     .heading {
         border-bottom: 0;
@@ -258,18 +270,34 @@ h3.subtitle {
     padding: 90px 0 45px;
     text-align: center;
 }
+
 .container-fluid.video1 h2 {
     color: #dededb;
     margin-top: -25px;
 }
+
 @media only screen and (max-device-width : 769px) {
     .container-fluid.video1 h2 {
         font-size: 14px;
     }
 }
 
-.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom: 50px; } 
-.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 @media only screen and (min-device-width : 769px) {
     .embed-container {
@@ -300,9 +328,10 @@ h3.subtitle {
 @reg-righbot: #333 solid 2px;
 @reg-lefttop: #777 solid 1px;*/
 
-@reg-bg: #ffd200;
+@reg-bg: #ffffff;
 @reg-righbot: darken(@reg-bg, 20%) solid 1px;
 @reg-lefttop: darken(@reg-bg, 20%) solid 1px;
+
 .register-button {
     background-color: @reg-bg;
     border-left: @reg-lefttop;
@@ -310,6 +339,7 @@ h3.subtitle {
     border-right: @reg-righbot;
     border-bottom: @reg-righbot;
 }
+
 .register-button:hover {
     background-color: darken(@reg-bg, 6%);
 }
@@ -317,6 +347,7 @@ h3.subtitle {
 @pro-bg: #f6f6f6;
 @pro-righbot: darken(@pro-bg, 20%) solid 1px;
 @pro-lefttop: darken(@pro-bg, 20%) solid 1px;
+
 .prospectus-button {
     background-color: @pro-bg;
     border-left: @pro-lefttop;
@@ -324,6 +355,7 @@ h3.subtitle {
     border-right: @pro-righbot;
     border-bottom: @pro-righbot;
 }
+
 .prospectus-button:hover {
     background-color: darken(@pro-bg, 6%);
 }
@@ -331,19 +363,21 @@ h3.subtitle {
 
 
 
-.learnContainer{
+.learnContainer {
     background-image: url("../Images/bluecomb.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     min-height: 92vh;
 }
+
 .eoicontainer {
     background-image: url("../Images/wardrobe_bw.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
+
 .container-fluid {
     img.backimg {
         position: absolute;
@@ -354,10 +388,11 @@ h3.subtitle {
         height: 100%;
         z-index: -999;
     }
+
     img.greyscale {
         -webkit-filter: grayscale(100%);
-	    filter: grayscale(100%);
-	    filter: gray;
+        filter: grayscale(100%);
+        filter: gray;
     }
 }
 
@@ -373,4 +408,128 @@ h3.subtitle {
     z-index: 9999;
     width: 100%;
     color: darken(@bannerBack, 6%);
+}
+
+
+.newtopbanner {
+    /*background: #df325a;
+    background: -moz-linear-gradient(top, #df325a 0%, #e6476c 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #df325a), color-stop(100%, #e6476c));
+    background: -webkit-linear-gradient(top, #df325a 0%, #e6476c 100%);
+    background: -o-linear-gradient(top, #df325a 0%, #e6476c 100%);
+    background: -ms-linear-gradient(top, #df325a 0%, #e6476c 100%);
+    background: linear-gradient(to bottom, #df325a 0%, #e6476c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#df325a', endColorstr='#e6476c', GradientType=0 );*/
+    
+    padding-top: 90px;
+    color: #efefef;
+    padding-bottom: 20px;
+
+    .highlight {
+        text-align: center;
+        border: solid 1px lighten(@topbannerBack, 5%);
+        background-color: darken(@topbannerBack, 5%);
+        margin-bottom: 10px;
+
+        h1 {
+            font-size: 4.5em;
+            color: #ffd200;
+            text-shadow: #2e2e2e 0 4px 5px;
+        }
+        h2 {
+            
+            font-size: 3.5em;
+            color: #ffd200;
+            text-shadow: #2e2e2e 0 2px 3px;
+        }
+
+    }
+
+    .graphic {
+        padding: 0 10px 0 1px;
+    }
+
+    .nextsteps {
+        background-color: lighten(@headingColor, 5%);
+        border: solid 1px darken(@headingColor, 5%);
+        padding: 20px;
+        font-size: 1.5em;
+        height: 300px;
+        
+        ul {
+            padding: 10px;
+
+            li {
+                padding: 6px;
+                list-style: none;
+
+                i {
+                    margin-left: 15px;
+                    top: 2px;
+                }
+            }
+        }
+    }
+}
+
+
+.newButtonContainer {
+    vertical-align: middle;
+    text-align: center;
+    display: table;
+
+    a {
+        background-color: @reg-bg;
+        border: solid 1px darken(@reg-bg, 25%);
+
+        display: block;
+        text-align: center;
+        width: 60%;
+        padding: 10px 20px;
+        margin: auto;
+        color: #333;
+        text-decoration: none;
+        -webkit-box-shadow: 1px 1px 0px 0px rgba(112,112,112,1);
+        -moz-box-shadow: 1px 1px 0px 0px rgba(112,112,112,1);
+        box-shadow: 1px 1px 0px 0px rgba(112,112,112,1);
+
+        i {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+    }
+
+    a:hover {
+        background-color: darken(@reg-bg, 13%);
+    }
+}
+
+
+@media only screen and (min-width : 992px) {
+    .is-table-row {
+        display: table;
+    }
+    .is-table-cell {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+    }
+}
+@media only screen and (min-width : 768px) and (max-width : 1200px) {
+    .newtopbanner .nextsteps {
+        font-size: 1em;
+        height: 246px;
+    }
+}
+@media only screen and (max-width: 992px) {
+   .newButtonContainer {
+        width: 100%;
+        margin-top: 30px;
+   }   
+
+     .newtopbanner .graphic {
+        padding: 10px 0 20px;
+    }
+
 }

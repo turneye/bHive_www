@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Proza+Libre|Slabo+27px" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="Content/custom.min.css" rel="stylesheet" />
+    <link href="Content/custom.min.css?v=1.1" rel="stylesheet" />
 
     <!--
     To collect end-user usage analytics about your application,
@@ -19,14 +19,14 @@
     automatically in just a few seconds.
     -->
     <script type="text/javascript">
-  var appInsights=window.appInsights||function(config){
-    function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
-    }({
-        instrumentationKey:"6aa861c3-0197-4015-865f-3b7de0e27116"
-    });
+        var appInsights = window.appInsights || function (config) {
+            function i(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, u = document, e = window, o = "script", s = "AuthenticatedUserContext", h = "start", c = "stop", l = "Track", a = l + "Event", v = l + "Page", y = u.createElement(o), r, f; y.src = config.url || "https://az416426.vo.msecnd.net/scripts/a/ai.0.js"; u.getElementsByTagName(o)[0].parentNode.appendChild(y); try { t.cookie = u.cookie } catch (p) { } for (t.queue = [], t.version = "1.0", r = ["Event", "Exception", "Metric", "PageView", "Trace", "Dependency"]; r.length;) i("track" + r.pop()); return i("set" + s), i("clear" + s), i(h + a), i(c + a), i(h + v), i(c + v), i("flush"), config.disableExceptionTracking || (r = "onerror", i("_" + r), f = e[r], e[r] = function (config, i, u, e, o) { var s = f && f(config, i, u, e, o); return s !== !0 && t["_" + r](config, i, u, e, o), s }), t
+        }({
+            instrumentationKey: "6aa861c3-0197-4015-865f-3b7de0e27116"
+        });
 
-    window.appInsights=appInsights;
-    appInsights.trackPageView();
+        window.appInsights = appInsights;
+        appInsights.trackPageView();
     </script>
 </head>
 <body ng-app="app" id="home">
@@ -50,24 +50,51 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#pitchNight">Pitch Night</a></li>
                     <li><a href="learn.html">Learn More</a></li>
-                    <li><a href="register.html">EOI</a></li>
+                    <li><a href="register.html">Contact Us</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
 
     <!-- Page Contents -->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="topbanner">
-                <div class="container">
-                    <div class="buttons">
-                        <a class="ourbutton prospectus-button" href="Content/bHiveProspectus.pdf" target="_blank">View the prospectus</a>
-                        <a class="ourbutton register-button" href="register.html">Expression of interest</a>
+    <div class="container-fluid newtopbanner">
+        <div class="container">
+            <div class="row is-table-row">
+                <div class="col-md-9 col-sm-12 is-table-cell m-b-md">
+                    <div class="col-md-12 highlight">
+                        <h1>Thankyou Bendigo!</h1>
+                        <h2>We're OFF <i class="glyphicon glyphicon-send"></i></h2>
+                    </div>
+                    <div class="col-md-8 graphic">
+                        <img src="Images/sofar.png" class="img-responsive" alt="Wonderful responses so far..." />
+                    </div>
+                    <div class="col-md-4 nextsteps">
+                        Our next steps...
+                        <ul>
+                            <li><i class="glyphicon glyphicon-piggy-bank"></i>&nbsp; Fundraising</li>
+                            <li><i class="glyphicon glyphicon-globe"></i>&nbsp; Co-op Entity</li>
+                            <li><i class="glyphicon glyphicon-grain"></i>&nbsp; Story Telling</li>
+                            <li><i class="glyphicon glyphicon-qrcode"></i>&nbsp; Technology</li>
+                        </ul>
+                        <span class="pull-right">...stay tuned!</span>
                     </div>
                 </div>
-                <div class="moveindicator">
-                    <i class="fa fa-chevron-down fa-2x"></i>
+                <div class="col-md-3 col-sm-12 is-table-cell" style="vertical-align: middle;">
+                    <div class="row newButtonContainer">
+                        <a href="#pitchNight" id="about">
+                            <i class="glyphicon glyphicon-info-sign"></i>
+                            <p>Catch up with the Pitch Night</p>
+                        </a>
+                        <br />
+                        <br />
+                        <a href="register.html" id="about">
+                            <i class="glyphicon glyphicon-thumbs-up"></i>
+                            <p>I would like to support bHive</p>
+
+                        </a>
+                        <br />
+                        <br />
+                    </div>
                 </div>
             </div>
         </div>
@@ -103,45 +130,25 @@
 
     <div class="container-fluid visible-xs">
         <div class="container section" style="margin-top: -50px;">
-                <div class="col-xs-12 text-center">
-                    <h1>bHive objectives</h1>
-                    <div class="text-justify">
-                        <p>Provide the technology that allows Bendigo to run peer to peer sharing enterprises</p>
-                        <p>Stimulate local spending, investment, work, entrepreneurship and connections</p>
-                        <p>Reinvest locally to build an economy based on shared health, wellbeing and prosperity</p>
-                    </div>
+            <div class="col-xs-12 text-center">
+                <h1>bHive objectives</h1>
+                <div class="text-justify">
+                    <p>Provide the technology that allows Bendigo to run peer to peer sharing enterprises</p>
+                    <p>Stimulate local spending, investment, work, entrepreneurship and connections</p>
+                    <p>Reinvest locally to build an economy based on shared health, wellbeing and prosperity</p>
                 </div>
+            </div>
             <div class="col-xs-12">
                 <hr />
             </div>
-                <div class="col-xs-12 text-center">
-                    <div class="contents">
-                        <h1>Why “bHive”?</h1>
-                        <div class="text-justify">
-                            <p>The Beehive Building on Pall Mall housed Bendigo’s Mining Exchange, purpose built to service Bendigo’s new gold rush economy. This bHive is being designed to service the next economic boom for Bendigo: our sharing economy.</p>
-                        </div>
+            <div class="col-xs-12 text-center">
+                <div class="contents">
+                    <h1>Why “bHive”?</h1>
+                    <div class="text-justify">
+                        <p>The Beehive Building on Pall Mall housed Bendigo’s Mining Exchange, purpose built to service Bendigo’s new gold rush economy. This bHive is being designed to service the next economic boom for Bendigo: our sharing economy.</p>
                     </div>
                 </div>
-            <!--<div class="row">
-                <div class="col-md-5 col-md-offset-1">
-                    <div class="hexagon">
-                        <div class="contents">
-                            <h1>bHive objectives</h1>
-                            <p>Provide the technology that allows Bendigo to run peer to peer sharing enterprises</p>
-                            <p>Stimulate local spending, investment, work, entrepreneurship and connections</p>
-                            <p>Reinvest locally to build an economy based on shared health, wellbeing and prosperity</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="hexagon color-2">
-                        <div class="contents">
-                            <h1>Why “bHive”?</h1>
-                            <p>The Beehive Building on Pall Mall housed Bendigo’s Mining Exchange, purpose built to service Bendigo’s new gold rush economy. This bHive is being designed to service the next economic boom for Bendigo: our sharing economy.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
+            </div>
         </div>
     </div>
 
@@ -183,14 +190,6 @@
             </div>-->
         </div>
     </div>
-    <div class="container-fluid video1" id="pitchNight">
-        <div class="container text-center">
-            <h2>bHive Pitch Night - Handle Bar - 25.11.2016</h2><br/>
-            <div class='embed-container'><iframe src='http://player.vimeo.com/video/189748914' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-            <div class='embed-container'><iframe src='http://player.vimeo.com/video/189683822' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-            <div class='embed-container'><iframe src='http://player.vimeo.com/video/189738526' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-        </div>
-    </div>
 
     <div class="container-fluid thecoop">
         &nbsp;
@@ -199,9 +198,9 @@
     <div class="container">
         <div class="section thecoop" id="thecoop">
             <div class="dropshadow">
-            <div class="heading">
-                <div class="headingtext">The bHive Cooperative</div>
-            </div>
+                <div class="heading">
+                    <div class="headingtext">The bHive Cooperative</div>
+                </div>
                 <div class="content">
                     <div class="row">
                         <div class="col-md-12 section">
@@ -237,14 +236,29 @@
         </div>
     </div>
 
+    <div class="container-fluid" id="pitchNight">
+        &nbsp;
+    </div>
+
+    <div class="container-fluid video1">
+        <div class="container text-center">
+            <h2>bHive Pitch Night - Handle Bar - 25.11.2016</h2>
+            <a class="btn btn-primary" href="Content/bHiveProspectus.pdf" target="_blank" id="about">View the prospectus</a>
+            <br />
+            <br />
+            <div class='embed-container'><iframe src='http://player.vimeo.com/video/189748914' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+            <div class='embed-container'><iframe src='http://player.vimeo.com/video/189683822' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+            <div class='embed-container'><iframe src='http://player.vimeo.com/video/189738526' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+        </div>
+    </div>
 
 
-        <script src="Scripts/jquery-1.9.1.min.js"></script>
-        <script src="Scripts/bootstrap.min.js"></script>
-        <script src="Scripts/angular.js"></script>
-        <script src="Scripts/angular-animate.js"></script>
-        <script src="Scripts/angular-route.js"></script>
-        <script src="App/app.js"></script>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-animate.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="App/app.js"></script>
 
     <script>
         $('.navbar-collapse a').click(function () {

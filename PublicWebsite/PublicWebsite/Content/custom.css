@@ -198,6 +198,7 @@ h3.subtitle {
 .section.thecoop {
   position: relative;
   top: -130px;
+  margin-bottom: -130px;
 }
 .section.thecoop .heading {
   border-bottom: 0;
@@ -262,14 +263,14 @@ h3.subtitle {
 @reg-righbot: #333 solid 2px;
 @reg-lefttop: #777 solid 1px;*/
 .register-button {
-  background-color: #ffd200;
-  border-left: #997e00 solid 1px;
-  border-top: #997e00 solid 1px;
-  border-right: #997e00 solid 1px;
-  border-bottom: #997e00 solid 1px;
+  background-color: #ffffff;
+  border-left: #cccccc solid 1px;
+  border-top: #cccccc solid 1px;
+  border-right: #cccccc solid 1px;
+  border-bottom: #cccccc solid 1px;
 }
 .register-button:hover {
-  background-color: #e0b900;
+  background-color: #f0f0f0;
 }
 .prospectus-button {
   background-color: #f6f6f6;
@@ -318,4 +319,106 @@ h3.subtitle {
   z-index: 9999;
   width: 100%;
   color: #be1850;
+}
+.newtopbanner {
+  /*background: #df325a;
+    background: -moz-linear-gradient(top, #df325a 0%, #e6476c 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #df325a), color-stop(100%, #e6476c));
+    background: -webkit-linear-gradient(top, #df325a 0%, #e6476c 100%);
+    background: -o-linear-gradient(top, #df325a 0%, #e6476c 100%);
+    background: -ms-linear-gradient(top, #df325a 0%, #e6476c 100%);
+    background: linear-gradient(to bottom, #df325a 0%, #e6476c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#df325a', endColorstr='#e6476c', GradientType=0 );*/
+  padding-top: 90px;
+  color: #efefef;
+  padding-bottom: 20px;
+}
+.newtopbanner .highlight {
+  text-align: center;
+  border: solid 1px #e2486c;
+  background-color: #d6214b;
+  margin-bottom: 10px;
+}
+.newtopbanner .highlight h1 {
+  font-size: 4.5em;
+  color: #ffd200;
+  text-shadow: #2e2e2e 0 4px 5px;
+}
+.newtopbanner .highlight h2 {
+  font-size: 3.5em;
+  color: #ffd200;
+  text-shadow: #2e2e2e 0 2px 3px;
+}
+.newtopbanner .graphic {
+  padding: 0 10px 0 1px;
+}
+.newtopbanner .nextsteps {
+  background-color: #232323;
+  border: solid 1px #090909;
+  padding: 20px;
+  font-size: 1.5em;
+  height: 300px;
+}
+.newtopbanner .nextsteps ul {
+  padding: 10px;
+}
+.newtopbanner .nextsteps ul li {
+  padding: 6px;
+  list-style: none;
+}
+.newtopbanner .nextsteps ul li i {
+  margin-left: 15px;
+  top: 2px;
+}
+.newButtonContainer {
+  vertical-align: middle;
+  text-align: center;
+  display: table;
+}
+.newButtonContainer a {
+  background-color: #ffffff;
+  border: solid 1px #bfbfbf;
+  display: block;
+  text-align: center;
+  width: 60%;
+  padding: 10px 20px;
+  margin: auto;
+  color: #333;
+  text-decoration: none;
+  -webkit-box-shadow: 1px 1px 0px 0px #707070;
+  -moz-box-shadow: 1px 1px 0px 0px #707070;
+  box-shadow: 1px 1px 0px 0px #707070;
+}
+.newButtonContainer a i {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+.newButtonContainer a:hover {
+  background-color: #dedede;
+}
+@media only screen and (min-width: 992px) {
+  .is-table-row {
+    display: table;
+  }
+  .is-table-cell {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .newtopbanner .nextsteps {
+    font-size: 1em;
+    height: 246px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .newButtonContainer {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .newtopbanner .graphic {
+    padding: 10px 0 20px;
+  }
 }
