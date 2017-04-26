@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Properties -->
+    <title>bHive bLog</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Proza+Libre|Slabo+27px" rel="stylesheet">
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/custom.min.css?v=1.1" rel="stylesheet" />
+    <!--
+    To collect end-user usage analytics about your application,
+    insert the following script into each page you want to track.
+    Place this code immediately before the closing </head> tag,
+    and before any other scripts. Your first data will appear
+    automatically in just a few seconds.
+    -->
+    <script type="text/javascript">
+        var appInsights = window.appInsights || function (config) {
+            function i(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, u = document, e = window, o = "script", s = "AuthenticatedUserContext", h = "start", c = "stop", l = "Track", a = l + "Event", v = l + "Page", y = u.createElement(o), r, f; y.src = config.url || "https://az416426.vo.msecnd.net/scripts/a/ai.0.js"; u.getElementsByTagName(o)[0].parentNode.appendChild(y); try { t.cookie = u.cookie } catch (p) { } for (t.queue = [], t.version = "1.0", r = ["Event", "Exception", "Metric", "PageView", "Trace", "Dependency"]; r.length;) i("track" + r.pop()); return i("set" + s), i("clear" + s), i(h + a), i(c + a), i(h + v), i(c + v), i("flush"), config.disableExceptionTracking || (r = "onerror", i("_" + r), f = e[r], e[r] = function (config, i, u, e, o) { var s = f && f(config, i, u, e, o); return s !== !0 && t["_" + r](config, i, u, e, o), s }), t
+        }({
+            instrumentationKey: "6aa861c3-0197-4015-865f-3b7de0e27116"
+        });
+
+        window.appInsights = appInsights;
+        appInsights.trackPageView();
+    </script>
+</head>
+<body ng-app="app">
+    <!-- Following Menu -->
+    <nav class="navbar navbar-default navbar-fixed-top learntopcolor">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="Images/logo2.png" alt="bHive" /></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#pitchNight">Pitch Night</a></li>
+                    <li><a href="learn.html">Learn More</a></li>
+                    <li class="active"><a href="#">Blog Posts</a></li>
+                    <li><a href="register.html">Contact Us</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="topOffset"></div>
+    <!-- Page Contents -->
+    <div class="container-fluid blogContainer">
+        <!--<img src="Images/bluecomb.jpg" class="backimg img-responsive" />-->
+        <br />
+        <br />
+        <div class="section">
+            <div class="container">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        The User Experience
+                        <p class="info">10th March, 2017</p>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-9">
+                            <p>
+                                First you join your Village Hive. When you sign up you are linked with people who live within 250m of you. You can message them, share wheel barrows, ladders and power drills, organise events with them, ask for advice, run time banking services like babysitting clubs, find others with shared passions and create local projects. Community connections are so important that we’ve put Village Hives at the centre of bHive.
+                            </p>
+                            <p>
+                                Signing up to bHive costs $10 a month because we’ve built in a heap of value. You become a member of the bHive cooperative with voting rights. You own your own data, its encrypted and its never sold to anyone ever. You get access to your Village Hive and to all the free services on bHive, like stuff sharing and the City Hive, with events and public notices from across Bendigo. You also get to build a Reputation profile on bHive, that shows others in Bendigo how trustworthy you are. If you’re trustworthy then others will let you borrow their stuff, cars, time, money and more. bHive cooperative revenue comes entirely from membership and we’re constantly upgrading and improving and adding new sharing services to the platform to add value to the membership.
+                            </p>
+                            <p>
+                                Then there is the Sharing Hive. This is the economic engine of the bHive. These services operate across Bendigo and will let you lend or borrow anything with monetary value, like skills, money, cars, bikes, stuff, power, spaces, homes and more. You can earn income from your idle car, house or solar power. Or you could pay a fee to use others skills, stuff, delivery services and free spaces. We’re starting with Peer to Peer car sharing, but over time many sharing services will be added to the platform. Want to create and run one? Come and chat to us and create a job for yourself.
+                            </p>
+                            <p>
+                                Lastly, we have created the Giving Hive. 5% of your spending and income on the Sharing Hive goes into three Bendigo funds. The first is the Earth fund, for local biodiversity restoration projects. The second is the Just fund, for local projects that reduce the root causes of poverty and disadvantage. The Third is the New Economy Fund, which will assist Bendigo people, organisations and communities to develop further cooperative sharing enterprises on the bHive. You will choose which projects receive your 5% spending money. The Giving Hive is about our local spending restoring the local ecology, building community resilience and strength and growing our local shared economy.
+                            </p>
+                            <p>
+                                bHive is a Bendigo based platform cooperative. We all own it together, work in it together, use it together, build it together, and we all profit from its long-term existence. No one gets rich from the bHive and no tech giant can buy it. We all save money, because the bHive will move us progressively from a consumption based economy to a service based economy. Every dollar we spend on bHive stays in Bendigo and is spent again many times by other Bendigo people.
+                            </p>
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="/Images/screenshot.png" class="img-responsive" />
+                            <div class="imgTitle">Mock Screen Design</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-animate.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="App/app.js"></script>
+
+</body>
+</html>

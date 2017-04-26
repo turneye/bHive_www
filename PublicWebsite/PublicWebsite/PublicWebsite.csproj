@@ -106,9 +106,11 @@
     <Content Include="Images\honeycomb_overview_small.png" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\logo2.png" />
+    <Content Include="Images\screenshot.png" />
     <Content Include="Images\sofar.png" />
     <Content Include="Images\wardrobe.png" />
     <Content Include="Images\wardrobe_bw.png" />
+    <Content Include="blog.html" />
     <Content Include="register.html" />
     <Content Include="learn.html" />
     <Content Include="index.html" />
